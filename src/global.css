@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 160%;
+  background-color: #071422;
+
+  overflow-x: hidden;
+}
+
+h2 {
+  color: #c4d4e3;
+  font-weight: 700;
+}
+
+span {
+  color: #7b96b2;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+p {
+  color: #afc2d4;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.link-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  transition: all 0.1s;
+  border-bottom: 1px solid transparent;
+
+  & a {
+    color: #3294f8;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+  }
+
+  & div {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-image: url(./assets/link-icon.svg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &:hover {
+    border-bottom: 1px solid #3294f8;
+    cursor: pointer;
+  }
+}
+
+input[type='text'] {
+  display: flex;
+  padding: 0.75rem 1rem;
+
+  border-radius: 0.375rem;
+  border: 1px solid #1c2f41;
+  outline: 1px solid #1c2f41;
+
+  background-color: #040f1a;
+
+  color: white;
+  font-family: 'Nunito', sans-serif;
+
+  &:focus {
+    outline: 1px solid #3294f8;
+    border-color: #3294f8;
+  }
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  /* max-width: 26rem; */
+  padding: 2rem;
+  background: #112131;
+  border-radius: 0.625rem;
+
+  margin: 2rem 0;
+
+  border: 2px solid transparent;
+  outline: 2px solid transparent;
+
+  & header {
+    display: flex;
+    justify-content: space-between;
+    color: #e7edf4;
+
+    & h1 {
+      max-width: 17rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    & p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      display: inline;
+    }
+  }
+
+  & div {
+    overflow: hidden;
+    color: #afc2d4;
+
+    & span {
+      font-size: 1rem;
+      line-height: 160%;
+      font-weight: 1.6rem;
+    }
+  }
+
+  transition: border 0.1s;
+
+  &:hover {
+    border: 2px solid var(--Base-Label, #3a536b);
+  }
+}
+
+.banner {
+  background-image: url('./assets/header-banner.svg');
+  background-position: top;
+  background-size: cover;
+  width: 100vw;
+  height: 35vh;
+}
